@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio | Tu Nombre</title>
+  <link rel="stylesheet" href="./styles/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <header class="header">
+    <nav class="nav">
+      <div class="nav__logo">
+        <span>&lt;Francisco Lertora/&gt;</span>
+      </div>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú">
+        ☰
+      </button>
+
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#inicio" class="nav__link">Inicio</a></li>
+        <li><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
+        <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
+        <li><a href="#contacto" class="nav__link">Contacto</a></li>
+        <li>
+          <button class="btn-toggle-theme" id="toggleTheme" aria-label="Cambiar tema">
+            🌓
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección Hero / Inicio -->
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero__content">
+        <p class="hero__tag">Desarrollador Web | Full Stack | Cloud</p>
+        <h1 class="hero__title">Hola, soy <span>Francisco</span></h1>
+        <p class="hero__subtitle">
+          Entre redes, nubes y código: diseño soluciones que funcionan
+        </p>
+        <div class="hero__actions">
+          <a href="#proyectos" class="btn btn--primary">Ver proyectos</a>
+          <a href="#contacto" class="btn btn--outline">Contáctame</a>
+        </div>
+      </div>
+
+        <div class="hero__avatar">
+          <div class="avatar-circle">
+            <img src="./assets/images.png" alt="Foto de perfil" class ="avatar">
+          </div>
+        </div>
+      </section>
+
+    <!-- Sección Sobre mí -->
+    <section id="sobre-mi" class="section section--light">
+      <div class="container">
+        <h2 class="section__title">Sobre mí</h2>
+        <p class="section__text">
+            Ingeniero en formación especializado en redes, infraestructura cloud y automatización. Manejo herramientas como Cisco Packet Tracer, AWS y tecnologías de programación para construir soluciones robustas y escalables. Destaco por mi pensamiento analítico, disciplina y orientación al detalle.
+        </p>
+        <div class="grid-2">
+          <div>
+            <h3 class="section__subtitle">Habilidades</h3>
+            <ul class="skills">
+              <li class="skill">HTML5</li>
+              <li class="skill">CSS3</li>
+              <li class="skill">JavaScript</li>
+              <li class="skill">Excel</li>
+              <li class="skill">MySQL</li>
+              <li class="skill">Git & GitHub</li>
+              <li class="skill">Cloud / DevOps </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="section__subtitle">Experiencia</h3>
+            <div class="timeline">
+              <article class="timeline__item">
+                <h4>Bootcamp Excel Básico intermedio y avanzado</h4>
+                <span class="timeline__date">2023 - 2024</span>
+                <p>
+                  Completé 3 cursos de 60 horas en Excel adquiriendo dominio en tablas dinámicas, validación de datos, macros, VBA, Power Pivot y Power Query
+                </p>
+                <article class="timeline__item">
+                <h4>Bootcamp AWS Re/start </h4>
+                <span class="timeline__date">2022 - 2025</span>
+                <p>
+                  Desarrollo de habilidades en AWS obteniendo la certificación de Cloud Practitioner.
+                </p>
+              </article>
+              <article class="timeline__item">
+                <h4>Bootcamp full stack Java</h4>
+                <span class="timeline__date">2025 - 2026</span>
+                <p>
+                  Formación intensiva en desarrollo con Java full stack, buenas prácticas y trabajo en equipo
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="proyectos" class="section">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Proyectos</h2>
+          <p class="section__text">
+            Algunos de los proyectos en los que he trabajado recientemente.
+          </p>
+        </div>
+
+        <!-- Filtro simple (solo visual, JS puede usarse para mejorarlo) -->
+        <div class="projects-filter">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="front">Frontend</button>
+          <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Card 1 -->
+          <article class="project-card" data-category="front">
+            <h3 class="project-card__title">Landing Page Producto</h3>
+            <p class="project-card__description">
+              Landing page responsiva para un producto digital, optimizada para conversión y SEO.
+            </p>
+            <ul class="project-card__tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+            <div class="project-card__links">
+              <a href="#" target="_blank">Ver demo</a>
+              <a href="#" target="_blank">Código</a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="project-card" data-category="fullstack">
+            <h3 class="project-card__title">App de Tareas</h3>
+            <p class="project-card__description">
+              Aplicación full stack para gestionar tareas, con autenticación y API REST.
+            </p>
+            <ul class="project-card__tags">
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>MongoDB</li>
+            </ul>
+            <div class="project-card__links">
+              <a href="#" target="_blank">Ver demo</a>
+              <a href="#" target="_blank">Código</a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="project-card" data-category="front">
+            <h3 class="project-card__title">Dashboard Analytics</h3>
+            <p class="project-card__description">
+              Dashboard interactivo para visualizar métricas de negocio en tiempo real.
+            </p>
+            <ul class="project-card__tags">
+              <li>React</li>
+              <li>Chart.js</li>
+            </ul>
+            <div class="project-card__links">
+              <a href="#" target="_blank">Ver demo</a>
+              <a href="#" target="_blank">Código</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="section section--light">
+      <div class="container">
+        <h2 class="section__title">Contacto</h2>
+        <p class="section__text">
+          ¿Tienes una idea o proyecto en mente? Hablemos.
+        </p>
+
+        <div class="grid-2">
+          <div>
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Correo</label>
+                <input type="email" id="email" name="email" placeholder="tunombre@correo.com" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" rows="4" placeholder="Cuéntame sobre tu proyecto" required></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary">Enviar mensaje</button>
+              <p class="form__msg" id="formMsg"></p>
+            </form>
+          </div>
+
+          <div>
+            <h3 class="section__subtitle">O si prefieres:</h3>
+            <ul class="contact-info">
+              <li><strong>Correo:</strong> lertorafrancisco04@gmail.com</li>
+              <li><strong>Ubicación:</strong> Santiago, Chile</li>
+              <li><strong>LinkedIn:</strong> <a href="#" target="_blank">https://www.linkedin.com/in/franciscolertora/</a></li>
+              <li><strong>GitHub:</strong> <a href="#" target="_blank">https://github.com/FLertora</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© <span id="year"></span> Francisco Lertora. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="./scripts/main.js"></script>
+</body>
+</html>
