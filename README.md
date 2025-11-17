@@ -1,4 +1,4 @@
-# 📌 Portafolio Web – Tu Nombre
+# 📌 Portafolio Web – Francisco Lertora
 
 Este es mi **portafolio personal**, desarrollado con **HTML, CSS y JavaScript**, donde muestro mis proyectos, habilidades y formas de contacto. El diseño está enfocado en ser **moderno, responsivo y rápido**, con soporte para **modo oscuro / claro**, menú móvil y filtrado dinámico de proyectos.
 
@@ -6,10 +6,7 @@ Este es mi **portafolio personal**, desarrollado con **HTML, CSS y JavaScript**,
 
 ## 🚀 Demo en Vivo
 
-🔗 **Deploy:** *(Agrega aquí tu link: GitHub Pages / Netlify / Vercel)*  
-Ejemplo:  
-https://tuusuario.github.io/portafolio/
-
+🔗 https://github.com/FLertora/Portfolio
 ---
 
 ## 🛠️ Tecnologías utilizadas
