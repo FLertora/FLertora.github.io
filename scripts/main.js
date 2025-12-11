@@ -82,18 +82,31 @@ filterButtons.forEach((btn) => {
 const contactForm = document.getElementById("contactForm");
 const formMsg = document.getElementById("formMsg");
 
-contactForm.addEventListener("submit", (e) => {
-  e.preventDefault();
+contactForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
 
-  // Aquí normalmente enviarías los datos a tu backend o a un servicio
-  const name = document.getElementById("name").value.trim();
+  formMsg.textContent = "Enviando...";
+  formMsg.style.color = "#555";
 
-  formMsg.textContent = `Gracias, ${name || "🚀"} 👋. Tu mensaje ha sido enviado.`;
-  formMsg.style.color = "#22c55e";
+  const formData = new FormData(contactForm);
 
-  contactForm.reset();
+  try {
+    const response = await fetch("https://formspree.io/f/mvgevrle", {
+      method: "POST",
+      body: formData,
+      headers: { Accept: "application/json" }
+    });
 
-  setTimeout(() => {
-    formMsg.textContent = "";
-  }, 4000);
+    if (response.ok) {
+      formMsg.textContent = "¡Gracias! Tu mensaje fue enviado correctamente.";
+      formMsg.style.color = "green";
+      contactForm.reset();
+    } else {
+      formMsg.textContent = "Hubo un error. Por favor intenta nuevamente.";
+      formMsg.style.color = "red";
+    }
+  } catch (error) {
+    formMsg.textContent = "Error de conexión. Inténtalo más tarde.";
+    formMsg.style.color = "red";
+  }
 });
